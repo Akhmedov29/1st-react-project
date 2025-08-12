@@ -1,8 +1,13 @@
 import img from "../images/image copy 5.png";
-import img2 from "../images/image copy 4.png";
 import image from "../images/image copy.png";
 import image2 from "../images/image copy 2.png";
 import image3 from "../images/image copy 3.png";
+import { Swiper,SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import swiper from "../images/space.jpg"
+import swiper2 from "../images/stock.jpg"
+import swiper3 from "../images/4k.jpg"
+import swiper4 from "../images/nature2.jpg"
 
 
 function About() {
@@ -19,6 +24,7 @@ function About() {
             year now. Do you need a website design, site layout, or maybe a
             turnkey website? Then contact me.
           </p>
+          <button className="btn btn-info w-full max-w-[110px]"><a href="/contact">Contact Me</a></button>
         </div>
         <div>
           <img
@@ -33,7 +39,7 @@ function About() {
       <div className="w-full min-h-[920px] flex flex-col md:flex-row justify-center items-center gap-10 px-6 py-10">
         <div className="flex flex-col justify-between items-center h-[700px] gap-6">
           <img
-            src={image}
+            src={swiper4}
             alt="img1"
             className="w-[272px] h-[320px] object-cover rounded-xl"
           />
@@ -47,9 +53,9 @@ function About() {
         <div className="w-full max-w-[400px] h-auto bg-gray-600 rounded-[19px] px-6 py-6">
           <h1 className="text-3xl font-semibold text-center pb-4">About Me</h1>
           <p className="text-sm text-start leading-relaxed">
-            Hello again everyone! So, you already know that my name is Gleb. A
-            little about myself: student, 18 y.o., athlete-football player. I
-            love creativity since childhood. I live in Donetsk, Ukraine. Why
+            Hello again everyone! So, you already know that my name is Baxodir. A
+            little about myself: student, 16 y.o., athlete-calisthenics . I
+            love training since childhood. I live in Fergana, Uzbekistan. Why
             programming? Because I like it. It’s a profession of the future,
             which can help me travel and fulfill my dreams. I specialize in web
             design, front-end and back-end development, turnkey websites.
@@ -79,28 +85,24 @@ function About() {
       {/* Portfolio section */}
       <div className="w-full min-h-[700px] flex justify-center items-center px-6 py-12">
         <div className="w-full max-w-[970px] bg-gray-600 rounded-[29px] flex flex-col lg:flex-row justify-around items-center p-6 gap-6">
-          <div>
-            <img
-              src={img2}
-              alt="project"
-              className="w-[300px] md:w-[493px] h-auto object-cover rounded-xl"
-            />
-          </div>
-          <div className="text-center max-w-sm">
-            <h1 className="text-2xl font-semibold pb-4">Landing Ice-cream</h1>
-            <p className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-              orci eu elit consequat posuere ut sed elit. Nulla et tristique
-              felis. Morbi quis orci non purus blandit fringilla. Etiam et
-              mollis eros. Duis venenatis vulputate lacus, non tristique eros
-              placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris
-              nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim
-              purus, tempor sed massa vel, accumsan bibendum magna. Nullam
-              hendrerit cursus purus, sit amet viverra arcu gravida vel.
-            </p>
-          </div>
+          <div className="w-full text-center ">
+            <Swiper modules={[Navigation, Autoplay]} spaceBetween={20} slidesPerView={1} navigation autoplay={{ delay: 3000 }} loop={true}>
+      <SwiperSlide>
+        <img src={swiper} alt="1" className="w-full h-[500px] rounded-[25px]" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={swiper2} alt="2" className="w-full h-[500px] rounded-[25px]" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={swiper3} alt="3" className="w-full h-[500px] rounded-[25px]" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={swiper4} alt="3" className="w-full h-[500px] rounded-[25px]" />
+      </SwiperSlide>
+    </Swiper>
         </div>
       </div>
+    </div>
     </div>
   );
 }

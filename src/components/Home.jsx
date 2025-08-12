@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ImageContainer from "./api/ImageContainer";
-
-
+import Loader from './Loader';
 
 function Home() {
 const ACCESS_KEY = 'alpye9XZWtjg-VwBO9huP8WGjwLLm6i9U82DOowhIms'
@@ -14,13 +13,19 @@ useEffect(() => {
   })
   .then(data => {
     setImages(data)
+    console.log(data);
+    
   })
 },[])
 
 
   return (
     <div className="mx-4 my-2">
-      {images && <ImageContainer images={images}/>}
+      {images && images.length > 0 ? (
+        <ImageContainer images={images}/> 
+      ) : (
+        <Loader/>
+      )}
     </div>
   );
 }

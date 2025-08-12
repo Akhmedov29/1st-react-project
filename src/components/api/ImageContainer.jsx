@@ -3,7 +3,6 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Image from "./Image";
 
 function ImageContainer({ images }) {
-  console.log(images);
 
   return (
     <ResponsiveMasonry
