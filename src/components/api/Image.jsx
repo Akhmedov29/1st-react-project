@@ -45,7 +45,7 @@ function Image({ image, keys }) {
       </div>
       <div className="w-full h-[40px] bg-black bg-opacity-50 flex items-center justify-between absolute bottom-[0px]">
         <div className="flex items-center gap-2 ml-[10px]">
-          <Link
+          <button
             href={user.social.portfolio_url}
             className="flex items-center gap-2 h-full"
           >
@@ -57,7 +57,7 @@ function Image({ image, keys }) {
             <a href={user.social.portfolio_url} className="text-white">
               Project or YouTube
             </a>
-          </Link>
+          </button>
         </div>
         <button className="mr-3">
           <a

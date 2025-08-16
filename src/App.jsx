@@ -11,6 +11,7 @@ import ProtectRoute from "./components/ProtectRoute";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/firebaseConfig";
+import Profile from "./components/Profile";
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<Profile user={user} />} />
         <Route 
         path="/login" 
         element={user ? <Navigate to={'/'}/> : <Login setUser={setUser}/>} />

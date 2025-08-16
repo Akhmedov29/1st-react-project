@@ -16,15 +16,14 @@ function About() {
       {/* Hero section */}
       <div className="w-full min-h-[660px] flex flex-col lg:flex-row justify-center items-center px-6 pt-12 gap-10">
         <div className="flex flex-col gap-6 max-w-xl">
-          <h1 className="text-4xl text-gray-400">Hello</h1>
-          <h2 className="text-6xl font-bold text-gray-400">I'm Baxodir</h2>
-          <h2 className="text-6xl font-bold text-gray-400">Axmedov</h2>
+          <h1 className="text-4xl text-gray-400">Salom!</h1>
+          <h2 className="text-6xl font-bold text-gray-400">Ismim Baxodir</h2>
           <p className="text-lg font-light text-gray-400 leading-relaxed">
-            I've been doing web design, front-end and back-end development for a
-            year now. Do you need a website design, site layout, or maybe a
-            turnkey website? Then contact me.
+            Mening soham web-design qurish, front-end va back-end boshlaganimga yillar bo'ldi.
+            web-site dizayni, site-tuzilishi yoki 
+            tayyor site xohlaysizmi? Menga murojat qiling.
           </p>
-          <button className="btn btn-info w-full max-w-[110px]"><a href="/contact">Contact Me</a></button>
+          <button className="btn btn-info w-full max-w-[110px]"><a href="/contact">Telegram</a></button>
         </div>
         <div>
           <img

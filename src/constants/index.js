@@ -15,7 +15,6 @@ const navLinks = [
     id:"3",
     title:"Contact",
     path:"/contact"
-
 }
 ]
 
