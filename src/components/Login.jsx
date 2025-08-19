@@ -1,14 +1,27 @@
 import { useState } from "react";
 import img from "../images/nature3.png";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/firebaseConfig";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { toast } from 'react-hot-toast';
 
-function Login() {
-  const [email, setEmail] = useState()
+function Login(setUser, user) {
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState()
   const navigate = useNavigate()
+
+  const handleForgotPassword = async () => {
+        sendPasswordResetEmail(auth, email)
+        .then(()=>{
+          toast.success('Parol tiklash link email ga yuborildi!')
+        })
+        .catch(error => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          toast.error(errorCode, errorMessage)
+        })
+  }
 
   const handleGoogleLogin = async () => {
     try {
@@ -110,7 +123,8 @@ function Login() {
             At least one uppercase letter
           </p>
         </div>
-        <div className="flex justify-start items-center gap-2">
+        <div className="flex justify-start items-center flex-col gap-2">
+          <div className="flex gap-8">
           <button className="btn btn-success" onClick={handleLogin}>Log In</button>
           <button className="btn bg-white text-black border-[#e5e5e5]" onClick={handleGoogleLogin}>
             <svg
@@ -142,9 +156,34 @@ function Login() {
             </svg>
             Login with Google
           </button>
-          <Link to={"/signup"}>
-            <h5 className="underline decoration-blue-600 text-blue-600 decoration-2">Don't have an account ?</h5>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link to={"/signup"}>
+            <h5 className="underline decoration-green-600 text-green-400  decoration-2">Don't have an account?</h5>
           </Link>
+          <button
+            onClick={() => document.getElementById("my_modal_2").showModal()}
+            className="underline">Forgot Password!
+          </button>
+          <dialog id="my_modal_2" className="modal">
+          <div className="modal-box">
+            <div className="flex gap-2">
+              <input
+                type="email"
+                className="w-[380px] h-10 rounded-sm bg-gray-800 border-1px pb-[6px] pl-3"
+                placeholder="Email Address"
+                onChange={e=>setEmail(e.target.value)}
+              />
+              <button className="btn btn-success" onClick={handleForgotPassword}>
+                Send
+              </button>
+            </div>
+          </div>
+          <form method="dialog" className="modal-backdrop">
+            <button>close</button>
+          </form>
+          </dialog>
+          </div>
         </div>
       </div>
     </div>

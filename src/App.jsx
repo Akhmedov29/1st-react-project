@@ -45,7 +45,7 @@ function App() {
         <Route path="/profile" element={<Profile user={user} />} />
         <Route 
         path="/login" 
-        element={user ? <Navigate to={'/'}/> : <Login setUser={setUser}/>} />
+        element={user ? <Navigate to={'/'}/> : <Login setUser={setUser} user={user}/>} />
         <Route path="/signup" element={user ? <Navigate to={'/'}/> : <SignUp/>} />
         <Route path="/likedimg" element={<LikedImg />} />
       </Routes>

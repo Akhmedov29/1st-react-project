@@ -50,25 +50,26 @@ function About() {
         </div>
 
         <div className="w-full max-w-[400px] h-auto bg-gray-600 rounded-[19px] px-6 py-6">
-          <h1 className="text-3xl font-semibold text-center pb-4">About Me</h1>
+          <h1 className="text-3xl font-semibold text-center pb-4">Men haqimda</h1>
           <p className="text-sm text-start leading-relaxed">
-            Hello again everyone! So, you already know that my name is Baxodir. A
-            little about myself: student, 16 y.o., athlete-calisthenics . I
-            love training since childhood. I live in Fergana, Uzbekistan. Why
-            programming? Because I like it. It’s a profession of the future,
-            which can help me travel and fulfill my dreams. I specialize in web
-            design, front-end and back-end development, turnkey websites.
+            Hammaga yana bir bor salom! Siz allaqachon bilasiz ismim Baxodir.
+            O'zim haqimda ozgina: O'quvchi, 16 yosh, yengil-atletika havaskor . I
+            Shug'ullanishni yoshligimdan yaxshi ko'raman. 
+            Men O'zbekiston davlati, Farg'ona viloyatida yashayman. Nega
+            Dasturlash? Chunki bu menga yoqadi. Bu kelajak timsoli,
+            Bu soha mening sayohatim va orzularimga yetaklaydi. Men web-dizayn ning
+            Front-end, Back-end yoki tayyor veb-sahifa yasay olaman.
             <br />
             <br />
-            Why should you choose me? I approach each order with great
-            responsibility and passion. I avoid plagiarism and study the
-            project, the client, and their audience in detail. I work for
-            quality and try to complete the order uniquely and quickly, taking
-            into account all revisions and wishes.
+            Nega meni tanlashingiz kerak? Men har bir buyurtmaga katta mas’uliyat
+            va ishtiyoq bilan yondashaman. Men plagiat dan saqlanaman va proyekt
+            , Mijoz, ularning xohishlarini inobatga olaman. Men sifat
+            va buyurtmani oson tugatishga harakat qilaman, Barcha istaklarni hisobga 
+            olgan holda.
             <br />
             <br />
-            By trusting me, you'll get maximum value, save time and energy. If
-            you're interested, feel free to contact me below.
+            Menga ishonsangiz, siz yuqori darajani qo'lga kiritasiz, vaqtingiz va energiyangizni saqlaysiz. Qiziqqan bo'lsangiz
+            , o'zingizni bo'sh tuting va menga murojat qiling!
           </p>
         </div>
 
