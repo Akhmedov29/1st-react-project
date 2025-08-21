@@ -2,7 +2,7 @@ import { useState } from "react";
 import img from "../images/nature3.png";
 import { Link, useNavigate } from "react-router-dom";
 import { sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../firebase/firebaseConfig";
+import { auth, db, googleProvider } from "../firebase/firebaseConfig";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { toast } from 'react-hot-toast';
 

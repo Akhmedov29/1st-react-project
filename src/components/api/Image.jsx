@@ -10,13 +10,13 @@ function Image({ image, keys }) {
 
   const handlelike = () => {
     setLike(true);
-    toast("Liked!", {
+    toast("Like bosildi!", {
       icon: "❤️",
     });
   };
   const handlelike2 = () => {
     setLike(false);
-    toast("Disliked!", {
+    toast("Like qaytarib olindi!", {
       icon: "💔",
     });
   };
